@@ -1,1 +1,2 @@
-console.log('The Iron Yard Rocks');
+'use strict';
+

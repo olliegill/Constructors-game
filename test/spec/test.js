@@ -3,10 +3,13 @@
 (function () {
     'use strict';
 
-    describe('Give it some context', function () {
-        describe('maybe a bit more context here', function () {
-            it('should run here few assertions', function () {
-
+    describe('Character', function () {
+    	beforeEach(function(){
+        	this.wizard = new Wizard();
+      	})
+        describe('Wizard', function () {
+            it('wizard should have a name', function () {
+            	expect(this.wizard.name)
             });
         });
     });
