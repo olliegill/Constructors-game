@@ -31,12 +31,23 @@ Archer.prototype.attack2 = function(foe) {
 };
 
 Enemy.prototype.attack = function(foe) {
-  if(Math.random() < 0.75) {
-    hitAmount = Math.floor(Math.random() * 20 + 1);
-    foe.health = foe.health - hitAmount;
-    console.log("You were hit " + hitAmount + ". You now have "+ foe.health + "hitpoints.");
+  if (Math.random() < 0.5) {
+    if(Math.random() < 0.75) {
+      hitAmount = Math.floor(Math.random() * 20 + 1);
+      foe.health = foe.health - hitAmount;
+      console.log("You were hit " + hitAmount + ". You now have "+ foe.health + "hitpoints.");
+    } else {
+      console.log("They missed!");
+      return foe.health;
+    }
   } else {
-    console.log("They missed!");
-    return foe.health;
+    if(Math.random() < 0.4) {
+      hitAmount = Math.floor(Math.random() * 25 + 10);
+      foe.health = foe.health - hitAmount;
+      console.log("You were hit " + hitAmount + ". You now have "+ foe.health + "hitpoints.");
+    } else {
+      console.log("They missed!");
+      return foe.health;
+    }
   }
 };
