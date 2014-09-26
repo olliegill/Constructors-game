@@ -3,24 +3,108 @@
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
 // Custom Styles
+
+$header-font: 'Permanent Marker', cursive;
+$text-font: 'Special Elite', cursive;
+
+
+
+
+
+
 body {
-  background: #fafafa;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
+  background: black;
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 600px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
+header {
+  margin: 0 auto;
+  color: red;
+  text-align: center;
+}
+
+h1 {
+  font-family: $header-font;
+  font-size: 50px;
+}
+
+.form {
+  position: absolute;
+  display: inline-block;
+  width: 200px;
+}
+
+h2 {
+  font-family: $header-font;
+  text-align: center;
+  color: red;
+  margin-top: 0;
+}
+
+.dropdown {
+  outline: none;
+  display: inline-block;
+  height: 50px;
+  width: 200px;
+}
+
+.fight-button {
+  outline: none;
+  margin: 50px 0 5px;
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  font-size: 30px;
+  font-family: $text-font;
+  padding-top: 10px;
+  border: solid #353535 1px;
+  border-radius: 20px;
+  box-shadow: 6px 10px 0 0 #353535;
+}
+
+.fight-button:active {
+  box-shadow: 3px 5px 12px 0 #F7F700;
+  margin: 55px 0 0 0;
+}
+
+
+.attack1   {
+  display: inline-block;
+  margin-top: 300px;
+}
+
+.attack2 {
+  display: inline-block;
+  margin-top: 30px;
+}
+
+.fight-area {
+  position: absolute;
+  left: 15%;
+  margin: auto auto;
+  height: 500px;
+  width: 70%;
+  background: url('http://slateman.net/images/gaming/backgrounds/sf2ww-blanka.gif');
+  background-size: 150%;
+  background-repeat: no-repeat;
+
+}
+
+.text-area {
+  position: absolute;
+  top: 680px;
+  left: 15%;
+  border: inset #1D1F21 12px;
+  height: 100px;
+  width: 70%;
+  background: radial-gradient(ellipse, #363636, #1D1F21);
+  text-align: center;
+
+}
+
+.text {
+  display: inline-block;
+  font-family: $text-font;
+  color: white;
+  font-size: 30px;
+  margin-top: 25px;
 }
