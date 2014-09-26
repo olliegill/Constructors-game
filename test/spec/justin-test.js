@@ -18,7 +18,7 @@
             expect(this.archer.health).to.equal(100);
           });
         // describe("Attack Functions", function() {
-        //   it("should knock off at least one hp from an enemy 73.75% of the time", function () {
+        //   it("should knock off at least one hp from an enemy 75% of the time", function () {
         //     this.archer.attack1(this.enemy);
         //     expect(this.enemy.health).to.be.below(100);
         //   });

@@ -10,7 +10,7 @@ function Enemy() {
 
 Archer.prototype.attack1 = function(foe) {
   if(Math.random() < 0.75 ) {
-    hitAmount = Math.floor(Math.random() *20);
+    hitAmount = Math.floor(Math.random() * 20 + 1);
     foe.health = foe.health - hitAmount;
     console.log("You hit a(n) " + hitAmount + ". " + foe.name + " now has " + foe.health + " hitpoints.");
   } else {
@@ -21,7 +21,7 @@ Archer.prototype.attack1 = function(foe) {
 
 Archer.prototype.attack2 = function(foe) {
   if(Math.random() < 0.3 ) {
-    hitAmount = Math.floor(Math.random() *25 + 15);
+    hitAmount = Math.floor(Math.random() * 25 + 15);
     foe.health = foe.health - hitAmount;
     console.log("You hit a(n) " + hitAmount + ". " + foe.name + " now has " + foe.health + " hitpoints.");
   } else {
@@ -32,7 +32,7 @@ Archer.prototype.attack2 = function(foe) {
 
 Enemy.prototype.attack = function(foe) {
   if(Math.random() < 0.75) {
-    hitAmount = Math.floor(Math.random()*20);
+    hitAmount = Math.floor(Math.random() * 20 + 1);
     foe.health = foe.health - hitAmount;
     console.log("You were hit " + hitAmount + ". You now have "+ foe.health + "hitpoints.");
   } else {
