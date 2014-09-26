@@ -1,4 +1,5 @@
 
+
 // $(function(){
 //   $('.fight-button').click(function(fight){
 //     if($('hero-class') == fight.fighter){
@@ -38,3 +39,11 @@ var tiny = new Enemy1();
 
 	setTimeout(updateHealth,1000);
 })();
+
+ $(function(){
+   $('.fight-button').click(function(fight){
+     if($('hero-class') == Fighter.name){
+       alert('fighter');
+     }
+  });
+ });
