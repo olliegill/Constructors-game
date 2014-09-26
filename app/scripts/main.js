@@ -1,1 +1,7 @@
-console.log('The Iron Yard Rocks');
+// $(function(){
+//   $('.fight-button').click(function(fight){
+//     if($('hero-class') == fight.fighter){
+//       /*alert('fighter');*/
+//     }
+//  });
+// });
