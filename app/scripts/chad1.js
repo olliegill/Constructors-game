@@ -50,26 +50,53 @@ function Enemy1() {
 	this.nameOfAttack2 = "Bite";
 }
 
-Enemy1.prototype.attack1 = function(fighter){
+
+Enemy1.prototype.attack = function(fighter){
+
+  if (Math.random() < 0.5) {   // 50% chance of attack1
 	if (Math.random() < 0.75 ) {
 		var damage = Math.floor(Math.random()*10);
 		fighter.health = fighter.health - damage;
+		console.log(this.nameOfAttack1);
 		console.log(fighter.name +' took ' + damage +' damage. ' + fighter.name +' now has ' + fighter.health + ' hit points.');
 	}
 	else {
 		console.log(fighter.name + " dodged attack!");
 	}
-}
-
-Enemy1.prototype.attack2 = function(fighter) {
-	if (Math.random() < .25) {
+  }
+  else { // 50% chance of attack2
+  	if (Math.random() < .25) {
 		var damage = Math.floor(Math.random()*40);
 		fighter.health = fighter.health - damage;
+		console.log(this.nameOfAttack2);
 		console.log(fighter.name +' took ' + damage +' damage. ' + fighter.name +' now has ' + fighter.health + ' hit points.');
 	}
 	else {
 		console.log(fighter.name + " dodged attack!");
 	}
+  }	
 }
+
+// Enemy1.prototype.attack1 = function(fighter){
+// 	if (Math.random() < 0.75 ) {
+// 		var damage = Math.floor(Math.random()*10);
+// 		fighter.health = fighter.health - damage;
+// 		console.log(fighter.name +' took ' + damage +' damage. ' + fighter.name +' now has ' + fighter.health + ' hit points.');
+// 	}
+// 	else {
+// 		console.log(fighter.name + " dodged attack!");
+// 	}
+// }
+
+// Enemy1.prototype.attack2 = function(fighter) {
+// 	if (Math.random() < .25) {
+// 		var damage = Math.floor(Math.random()*40);
+// 		fighter.health = fighter.health - damage;
+// 		console.log(fighter.name +' took ' + damage +' damage. ' + fighter.name +' now has ' + fighter.health + ' hit points.');
+// 	}
+// 	else {
+// 		console.log(fighter.name + " dodged attack!");
+// 	}
+// }
 
 
