@@ -122,7 +122,3 @@ $('.attack_button2').on('click', function(){
 
 
 
-
-
-
-
