@@ -3,7 +3,7 @@ function Archer() {
   this.health = 100;
 }
 
-function Enemy() {
+function Enemy2() {
   this.name = "Jake";
   this.health = 100;
 }
@@ -30,7 +30,9 @@ Archer.prototype.attack2 = function(foe) {
   }
 };
 
-Enemy.prototype.attack = function(foe) {
+
+// Enemy2 constructor
+Enemy2.prototype.attack = function(foe) {
   if (Math.random() < 0.5) {
     if(Math.random() < 0.75) {
       hitAmount = Math.floor(Math.random() * 20 + 1);
