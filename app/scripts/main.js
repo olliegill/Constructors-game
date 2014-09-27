@@ -1,14 +1,8 @@
 
+(function(){
+  'use strict';
 
-// $(function(){
-//   $('.fight-button').click(function(fight){
-//     if($('hero-class') == fight.fighter){
-//       /*alert('fighter');*/
-//     }
-//  });
-// });
 
-//'use strict';
 
 
 // health bar styling 
@@ -31,7 +25,7 @@ $('.health').css({
 
 
 // begin fight
-var enemies = [ new Enemy1(), new Enemy(), new Enemy3()];
+var enemies = [ new Enemy1(), new Enemy2(), new Enemy3()];
 var hero = {};
 var villain = {};
 
@@ -63,9 +57,17 @@ $('.fight-button').on('click', function(){
 $('.attack_button').css({
   "height":"100px",
   "width": "100px",
-  "content": "Attack!",
-  "background":"teal"
+  "background":"teal",
+  "display":"block"
 
+});
+
+// attack button2
+$('.attack_button2').css({
+  "height":"100px",
+  "width": "100px",
+  "background":"teal",
+  "display":"block"
 });
 
 $('.comment_box').css({
@@ -74,23 +76,49 @@ $('.comment_box').css({
     "background": "gainsboro"
 });
 
+// function for vaillain attack also enables button. 
+function atk(){
+      villain.attack(hero);
+      $('.attack_button').attr('disabled', false);
+      $('.attack_button2').attr('disabled',false);
+    }
+
 // attack button functionality
 $('.attack_button').on('click', function(){
 
     hero.attack1(villain);
 
     $('.attack_button').attr('disabled','disabled');
+    $('.attack_button2').attr('disabled','disabled');
 
-    function atk(){
-      villain.attack(hero);
-      $('.attack_button').attr('disabled', false);
-    }
+    // function atk(){
+    //   villain.attack(hero);
+    //   $('.attack_button').attr('disabled', false);
+    // }
+    
+    setTimeout(atk, 2000);
+});
+
+// attack button2 functionality
+$('.attack_button2').on('click', function(){
+
+    hero.attack2(villain);
+
+    $('.attack_button').attr('disabled','disabled');
+    $('.attack_button2').attr('disabled','disabled');
+
+
+    // function atk(){
+    //   villain.attack(hero);
+    //   $('.attack_button').attr('disabled', false);
+    // }
     
     setTimeout(atk, 2000);
 });
 
 
 
+}());
 
 
 

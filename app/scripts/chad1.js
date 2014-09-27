@@ -13,31 +13,31 @@ function Wizard() {
 
 Wizard.prototype.attack1 = function(enemy){
 	if( Math.random() < 0.75) { // 75% chance of hit.
-		var damage = Math.floor(Math.random()*10);
+		var damage = Math.floor(Math.random()*10 + 1);
 		enemy.health = enemy.health - damage;
-		console.log('You hit a ' + damage +'. ' + enemy.name +' now has ' + enemy.health + ' hit points.');
-	}
+		console.log('You hit a(n) ' + damage +'. ' + enemy.name +' now has ' + enemy.health + ' hit points.');
+	} 
 	else {
 		console.log('You missed!');
 	}	
-}
+};
 
 Wizard.prototype.attack2 = function(enemy) {
 	if (this.numOfMagicAttacks > 0) {
 		this.numOfMagicAttacks = this.numOfMagicAttacks - 1;
 		if( Math.random() < 0.60) { // 60% chance of hit.
-			var damage = Math.floor(Math.random()*30);
+			var damage = Math.floor(Math.random()*50 + 20);
 			enemy.health = enemy.health - damage;
-			console.log('You hit a ' + damage +'. ' + enemy.name +' now has ' + enemy.health + ' hit points.');
+			console.log('You hit a(n) ' + damage +'. ' + enemy.name +' now has ' + enemy.health + ' hit points.');
 		}
 		else {
 			console.log('You missed!');
-		}	
+		}
 	}
 	else {
-		console.log(this.name +" has no more magic.")
+		console.log(this.name +" has no more magic.");
 	}
-}
+};
 
 
 
@@ -65,7 +65,7 @@ Enemy1.prototype.attack = function(fighter){
 	}
   }
   else { // 50% chance of attack2
-  	if (Math.random() < .25) {
+	if (Math.random() < .25) {
 		var damage = Math.floor(Math.random()*40);
 		fighter.health = fighter.health - damage;
 		console.log(this.nameOfAttack2);
@@ -74,29 +74,9 @@ Enemy1.prototype.attack = function(fighter){
 	else {
 		console.log(fighter.name + " dodged attack!");
 	}
-  }	
-}
+  }
+};
 
-// Enemy1.prototype.attack1 = function(fighter){
-// 	if (Math.random() < 0.75 ) {
-// 		var damage = Math.floor(Math.random()*10);
-// 		fighter.health = fighter.health - damage;
-// 		console.log(fighter.name +' took ' + damage +' damage. ' + fighter.name +' now has ' + fighter.health + ' hit points.');
-// 	}
-// 	else {
-// 		console.log(fighter.name + " dodged attack!");
-// 	}
-// }
 
-// Enemy1.prototype.attack2 = function(fighter) {
-// 	if (Math.random() < .25) {
-// 		var damage = Math.floor(Math.random()*40);
-// 		fighter.health = fighter.health - damage;
-// 		console.log(fighter.name +' took ' + damage +' damage. ' + fighter.name +' now has ' + fighter.health + ' hit points.');
-// 	}
-// 	else {
-// 		console.log(fighter.name + " dodged attack!");
-// 	}
-// }
 
 
