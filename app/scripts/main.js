@@ -3,8 +3,6 @@
   'use strict';
 
 
-
-
 // health bar styling 
 $('.health_bar_container').css({
 	"height":"50px",
@@ -23,11 +21,11 @@ $('.health').css({
 });
 
 
-
-// begin fight
+// variable declaration for characters
 var enemies = [ new Enemy1(), new Enemy2(), new Enemy3()];
 var hero = {};
 var villain = {};
+
 
 //health bar
 (function updateHealth(){
@@ -36,8 +34,9 @@ var villain = {};
 })();
 
 
-$('.fight-button').on('click', function(){
-    var selected = $('.dropdown :selected').attr('value');
+$('.fight-button').on('click tap', function(){
+    var selected = $('.dropdown :selected').attr('id');
+    console.log(selected);
     if (selected == "fighter") {
       hero = new Fighter();
     }
@@ -47,72 +46,34 @@ $('.fight-button').on('click', function(){
     else if (selected == "archer") {
       hero = new Archer();
     }
-    $('.form').empty();
+    $('.dropdown').remove();
     // generate enemy 
     villain = enemies[Math.floor(Math.random()*3)];
 });
 
 
-// attack button styling
-$('.attack_button').css({
-  "height":"100px",
-  "width": "100px",
-  "background":"teal",
-  "display":"block"
 
-});
 
-// attack button2
-$('.attack_button2').css({
-  "height":"100px",
-  "width": "100px",
-  "background":"teal",
-  "display":"block"
-});
-
-$('.comment_box').css({
-    "height":"100px",
-    "width":"300px",
-    "background": "gainsboro"
-});
-
-// function for vaillain attack also enables button. 
+// function for villain attack also enables button. 
 function atk(){
-      villain.attack(hero);
-      $('.attack_button').attr('disabled', false);
-      $('.attack_button2').attr('disabled',false);
-    }
+    villain.attack(hero);
+    $('.attack1').attr('disabled', false);
+    $('.attack2').attr('disabled',false);
+}
 
 // attack button functionality
-$('.attack_button').on('click', function(){
-
+$('.attack1').on('click tap', function(){
     hero.attack1(villain);
-
-    $('.attack_button').attr('disabled','disabled');
-    $('.attack_button2').attr('disabled','disabled');
-
-    // function atk(){
-    //   villain.attack(hero);
-    //   $('.attack_button').attr('disabled', false);
-    // }
-    
+    $('.attack1').attr('disabled','disabled');
+    $('.attack2').attr('disabled','disabled');
     setTimeout(atk, 2000);
 });
 
 // attack button2 functionality
-$('.attack_button2').on('click', function(){
-
+$('.attack2').on('click tap', function(){
     hero.attack2(villain);
-
-    $('.attack_button').attr('disabled','disabled');
-    $('.attack_button2').attr('disabled','disabled');
-
-
-    // function atk(){
-    //   villain.attack(hero);
-    //   $('.attack_button').attr('disabled', false);
-    // }
-    
+    $('.attack1').attr('disabled','disabled');
+    $('.attack2').attr('disabled','disabled');
     setTimeout(atk, 2000);
 });
 
