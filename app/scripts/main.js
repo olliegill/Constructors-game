@@ -11,7 +11,7 @@
 //'use strict';
 
 
-
+// health bar styling 
 $('.health_bar_container').css({
 	"height":"50px",
 	"width":"300px",
@@ -29,21 +29,72 @@ $('.health').css({
 });
 
 
-var wiz = new Wizard();
-var tiny = new Enemy1();
 
+// begin fight
+var enemies = [ new Enemy1(), new Enemy(), new Enemy3()];
+var hero = {};
+var villain = {};
 
+//health bar
 (function updateHealth(){
-
-	$('.health').animate({'width': 3*wiz.health+'px'},'easeInCubic');
-
-	setTimeout(updateHealth,1000);
+  $('.health').animate({'width': 3*hero.health+'px'},'easeInCubic');
+  setTimeout(updateHealth,1000);
 })();
 
- $(function(){
-   $('.fight-button').click(function(fight){
-     if($('hero-class') == Fighter.name){
-       alert('fighter');
-     }
-  });
- });
+
+$('.fight-button').on('click', function(){
+    var selected = $('.dropdown :selected').attr('value');
+    if (selected == "fighter") {
+      hero = new Fighter();
+    }
+    else if (selected == "wizard") {
+      hero = new Wizard();
+    }
+    else if (selected == "archer") {
+      hero = new Archer();
+    }
+    $('.form').empty();
+    // generate enemy 
+    villain = enemies[Math.floor(Math.random()*3)];
+});
+
+
+// attack button styling
+$('.attack_button').css({
+  "height":"100px",
+  "width": "100px",
+  "content": "Attack!",
+  "background":"teal"
+
+});
+
+$('.comment_box').css({
+    "height":"100px",
+    "width":"300px",
+    "background": "gainsboro"
+});
+
+// attack button functionality
+$('.attack_button').on('click', function(){
+
+    hero.attack1(villain);
+
+    $('.attack_button').attr('disabled','disabled');
+
+    function atk(){
+      villain.attack(hero);
+      $('.attack_button').attr('disabled', false);
+    }
+    
+    setTimeout(atk, 2000);
+});
+
+
+
+
+
+
+
+
+
+

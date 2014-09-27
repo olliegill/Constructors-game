@@ -25,14 +25,14 @@ function Enemy3(){
   this.nameOfAttack2 = 'Crazy Axe';
 }
 
-Enemy3.prototype.attack1= function(player){
+Enemy3.prototype.attack= function(player){
   if(Math.random() < 0.80){
     player.health = player.health - Math.floor(Math.random()+20);
   }
 };
 
-Enemy3.prototype.attack2 = function(player){
-  if(Math.random() < 0.50){
-    player.health = player.health - Math.floor(Math.random()+40);
-  }
-};
+// Enemy3.prototype.attack2 = function(player){
+//   if(Math.random() < 0.50){
+//     player.health = player.health - Math.floor(Math.random()+40);
+//   }
+// };
