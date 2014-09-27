@@ -46,11 +46,10 @@ $('.fight-button').on('click tap', function(){
     else if (selected == "archer") {
       hero = new Archer();
     }
-    $('.dropdown').remove();
+    $('.dropdown').empty();
     // generate enemy 
     villain = enemies[Math.floor(Math.random()*3)];
 });
-
 
 
 
