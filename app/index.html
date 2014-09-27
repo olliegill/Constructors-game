@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <title>Constructors Game</title>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
+    <link href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css" rel="stylesheet">
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
@@ -29,7 +29,7 @@
     <!-- HEADER -->
 
     <header>
-      <h1>AWESOME GAME TITLE</h1>
+      <h1>SUPER STREET FIGHTIN' MARIO BROTHERS</h1>
     </header>
 
 <!-- SIDEBAR -->
@@ -45,9 +45,11 @@
 
     <button name="Fight!" type="submit" class="fight-button">FIGHT!!!</button>
 
-
-  <button name="attack1" type="submit" id="attack-button1" class="attack1"> ATTACK!</button>
-  <button name="attack2" type="submit" id="attack-button2" class="attack2">POWER ATTACK!!</button>
+  <button name="add-health" type="button" id="health-button" class="add-health">
+    <span class="mega-octicon octicon-heart"></span><h4>HEAL!</h4>
+  </button>
+  <button name="attack1" type="button" id="attack-button1" class="attack1"> ATTACK!</button>
+  <button name="attack2" type="button" id="attack-button2" class="attack2">POWER ATTACK!!</button>
 </form>
 <!-- END SIDEBAR -->
 
@@ -57,7 +59,12 @@
     <div class="health">
     </div>
   </div>
-  <div class="fighter-image"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR20chk5OKxAikAnkF9Vw_-g8oBlw4xTA3bhokzKW2U2HO234sGEg"></div>
+  <div class="fighter-image"><!--<img src="http://www.videogamesprites.net/SuperMarioBros1/Characters/Mario/xFiery,P20Mario.gif.pagespeed.ic.ot4UfLXTC9.png">-->
+   <img src="http://www.videogamesprites.net/Zelda2/Link/Link%20(Normal)%20-%20Stab.gif">
+   <!--<img class="fireball" src="http://www.videogamesprites.net/SuperMarioBros1/Enemies/Castle/Fire-bar.gif">-->
+  </div>
+  <div class="enemy-image"><img src="http://www.videogamesprites.net/SuperMarioBros1/Enemies/Castle/Bowser.gif">
+  </div>
 </div>
 
 

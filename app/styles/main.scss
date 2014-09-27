@@ -47,6 +47,47 @@ h2 {
   width: 200px;
 }
 
+//HEALTH BUTTON
+
+
+.add-health {
+  margin-top: 50px;
+  border: none;
+  background: black;
+  outline: none;
+  width: 200px;
+  height: 150px;
+}
+
+.add-health span {
+  color: red;
+  font-size: 70px;
+}
+
+.add-health h4 {
+  margin: 0;
+  background: #C0C0C0;
+  height: 50px;
+  border: solid #353535 1px;
+  border-radius: 20px;
+  box-shadow: 6px 10px 0 0 #353535;
+  font-size: 30px;
+  font-family: $text-font;
+  padding-top: 10px;
+}
+
+.add-health h4:active {
+  box-shadow: 3px 5px 12px 0 #F7F700;
+  margin: 5px 0 0 0;
+}
+/* .add-health :active {
+  color: black;
+} */
+
+
+
+//FIGHT BUTTONS
+
 .fight-button {
   outline: none;
   margin: 50px 0 5px;
@@ -70,7 +111,7 @@ h2 {
 .attack1   {
   outline: none;
   display: inline-block;
-  margin: 230px 0 5px;
+  margin: 30px 0 5px;
   height: 50px;
   width: 200px;
   font-size: 30px;
@@ -83,7 +124,7 @@ h2 {
 
 .attack1:active {
   box-shadow: 3px 5px 12px 0 #F7F700;
-  margin: 235px 0 0 0 ;
+  margin: 35px 0 0 0 ;
 }
 
 .attack2 {
@@ -116,22 +157,107 @@ h2 {
   background-repeat: no-repeat;
 
 }
+.fighter-image img {
+  height: 200px;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+
+}
 
 .fighter-image {
   position: absolute;
-  top: 200px;
-  left: 50px;
+  top: 270px;
+  left: 150px;
+  animation: fight 8s linear infinite;
 }
 
-/*   @-webkit-keyframes fighter-image {
-  0% {top:200px; left: 50px;}
-  17% {top: 195px, left 55px;}
-  35% {top: 200px, left 60px;}
-  50% {top: 195px, left 65px;}
-  67% {top: 200px, left 70px;}
-  84% {top: 195px, left 75px;}
-  100% {top: 200px, left 80px;}
-} */
+@keyframes fight {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  8% {
+    transform: translate(33px, -10px);
+  }
+
+  17% {
+    transform: translate(67px, 0);
+  }
+
+  25% {
+    transform: translate(100px, -10px);
+  }
+
+  33% {
+    transform: translate(133px, 0);
+  }
+
+  42% {
+    transform: translate(167px, -10px);
+  }
+
+  50% {
+    transform: translate(200px, 0);
+  }
+
+  58% {
+    transform: translate(167px, -10px);
+  }
+
+  67% {
+    transform: translate(133px, 0);
+  }
+
+  75% {
+    transform: translate(100px, -10px);
+  }
+
+  83% {
+    transform: translate(66px, 0);
+  }
+
+  92% {
+    transform: translate(33px, -10px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+
+}
+
+.fighter-image .fireball {
+  position: absolute;
+  bottom: 100px;
+  left: 80px;
+  height: 30px;
+  animation: fire 4s linear infinite;
+}
+
+@keyframes fire {
+  0% {
+    transform: translate(0,0);
+  }
+
+  100% {
+    transform: translate(600px, 0);
+  }
+}
+
+.enemy-image {
+  position: absolute;
+  top: 270px;
+  left: 500px;
+  animation: fight 8s linear infinite;
+}
+
+.enemy-image img {
+  height: 200px;
+
+}
+
 
 
 
