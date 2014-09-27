@@ -147,22 +147,25 @@ h2 {
 }
 
 .fight-area {
+  overflow: hidden;
   position: absolute;
   left: 15%;
   margin: auto auto;
   height: 500px;
   width: 70%;
-  background: url('http://slateman.net/images/gaming/backgrounds/sf2ww-blanka.gif');
-  background-size: 150%;
+   background: url('http://twistedsifter.files.wordpress.com/2013/05/animated-gifs-of-fighting-game-backgrounds-24.gif');
+   /*('http://twistedsifter.files.wordpress.com/2013/05/animated-gifs-of-fighting-game-backgrounds-6.gif')*/
+  /*('http://slateman.net/images/gaming/backgrounds/sf2ww-blanka.gif')*/
+  background-size: /*150*/120%;
   background-repeat: no-repeat;
 
 }
 .fighter-image img {
   height: 200px;
-  -moz-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
+/*   -moz-transform: scaleX(-1);
+-o-transform: scaleX(-1);
+-webkit-transform: scaleX(-1);
+transform: scaleX(-1); */
 
 }
 
