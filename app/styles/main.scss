@@ -68,13 +68,41 @@ h2 {
 
 
 .attack1   {
+  outline: none;
   display: inline-block;
-  margin-top: 300px;
+  margin: 230px 0 5px;
+  height: 50px;
+  width: 200px;
+  font-size: 30px;
+  font-family: $text-font;
+  padding-top: 10px;
+  border: solid #353535 1px;
+  border-radius: 20px;
+  box-shadow: 6px 10px 0 0 #353535;
+}
+
+.attack1:active {
+  box-shadow: 3px 5px 12px 0 #F7F700;
+  margin: 235px 0 0 0 ;
 }
 
 .attack2 {
+  outline: none;
   display: inline-block;
   margin-top: 30px;
+  height: 50px;
+  width: 200px;
+  font-size: 25px;
+  font-family: $text-font;
+  padding-top: 10px;
+  border: solid #353535 1px;
+  border-radius: 20px;
+  box-shadow: 6px 10px 0 0 #353535;
+}
+
+.attack2:active {
+  box-shadow: 3px 5px 12px 0 #F7F700;
+  margin: 35px 0 0 0;
 }
 
 .fight-area {
@@ -87,6 +115,24 @@ h2 {
   background-size: 150%;
   background-repeat: no-repeat;
 
+}
+
+.fighter-image {
+  position: absolute;
+  top: 200px;
+  left: 50px;
+
+  @-webkit-keyframes fighter-image {
+    0% {top:200px; left: 50px;}
+    17% {top: 195px, left 55px;}
+    35% {top: 200px, left 60px;}
+    50% {top: 195px, left 65px;}
+    67% {top: 200px, left 70px;}
+    84% {top: 195px, left 75px;}
+    100% {top: 200px, left 80px;}
+  }
+
+  transition-duration: 3s;
 }
 
 .text-area {
