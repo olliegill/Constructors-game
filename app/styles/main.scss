@@ -161,12 +161,13 @@ h2 {
   overflow: hidden;
 }
 
-  .blood:hover .blood-top {
- top: 0;
- opacity: .9;
- transition-duration: 4s;
- z-index: 4;
-}
+
+// .blood:hover .blood-top {
+//   top: 0;
+//   opacity: .95;
+//   transition-duration: 4s;
+// }
+
 
 .blood-top {
   position: absolute;
@@ -215,13 +216,27 @@ h2 {
   z-index: 3;
 }
 
- .victory:hover .victory-cont {
+
+
+
+// .victory:hover .victory-cont {
+//   top: 0;
+//   transition-duration: 2s;
+// }
+
+// .victory:hover .win {
+//   animation-delay: 4s;
+//   animation: winner 1s linear;
+// }
+
+
+.victory-cont2 {
   top: 0;
   transition-duration: 2s;
   z-index: 3;
 }
 
-.victory:hover .win {
+.win2 {
   animation-delay: 4s;
   animation: winner 1s linear;
   z-index: 3;

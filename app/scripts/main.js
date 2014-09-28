@@ -16,10 +16,22 @@ var enemyImages = ["http://www.videogamesprites.net/SuperMarioBros1/Enemies/Cast
 "http://www.videogamesprites.net/SuperMarioBros1/Enemies/Underground/Buzzy%20Beetle%20-%20Blue.gif"];
 
 
-//health bar
+//health bar and end game screens
 (function updateHealth(){
   $('.health').animate({'width': 3*hero.health+'px'},'ease');
   $('.health2').animate({'width': 3*villain.health+'px'},'ease');
+  if (villain.health <= 0 ) {
+    $('.victory-cont').addClass('victory-cont2');
+    $('.win').addClass('win2');
+  }
+  if (hero.health <= 0 ) {
+    // $('.blood-top').addClass('blood-top2');
+    // $('.blood :first-child').addClass('blood-top2').removeClass('blood-top');
+    $('.blood-top').animate({
+      top: 0,
+      opacity: 0.95,
+    },4000);
+  }
 
   setTimeout(updateHealth,500);
 })();
@@ -64,7 +76,6 @@ $('.fight-button').on('click tap', function(){
     }
 
 });
-
 
 
 // function for villain attack also enables button. 
