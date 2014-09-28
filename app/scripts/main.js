@@ -3,52 +3,66 @@
   'use strict';
 
 
-// health bar styling 
-$('.health_bar_container').css({
-	"height":"50px",
-	"width":"300px",
-	"border-radius": "3px",
-	"background":"RGBA(175, 17, 28,1)"
-
-
-});
-
-$('.health').css({
-    "height":"50px",
-    "width": "300px",
-     "border-radius":"3px",
-     "background": "RGBA(0, 245, 5, 1)",
-});
-
 
 // variable declaration for characters
 var enemies = [ new Enemy1(), new Enemy2(), new Enemy3()];
 var hero = {};
 var villain = {};
+var fighterImages = ["http://www.videogamesprites.net/SuperMarioBros1/Characters/Mario/xFiery,P20Mario.gif.pagespeed.ic.ot4UfLXTC9.png",
+"http://www.videogamesprites.net/Zelda2/Link/Link%20(Normal)%20-%20Stab.gif",
+"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAABAAgMAAAAG4J09AAAADFBMVEUAuAAAiP//////pEAwwxouAAAAAnRSTlP/AOW3MEoAAACOSURBVCjPhdAhEoNAEATAMRjMfu3MGEy+hsGMua9hzmAm4orKblJFXOsGSekgkSBpFGxS/4GkjAaHmRGnYVeE7fFBizMcFTYAJsA+C9jC9shgtxcWrMBe0FZgXzKwAjsS2sSSIUAZmECB9IUuXRm2JNlPeE2MhEuSegJ1h9/YpGOTjgLyDwiQAJ+ACTzgDc4a3fVN7/srAAAAAElFTkSuQmCC"];
+var enemyImages = ["http://www.videogamesprites.net/SuperMarioBros1/Enemies/Castle/Bowser.gif",
+"http://www.videogamesprites.net/SuperMarioBros1/Enemies/Overworld/Goomba.gif",
+"http://www.videogamesprites.net/SuperMarioBros1/Enemies/Underground/Buzzy%20Beetle%20-%20Blue.gif"];
 
 
 //health bar
 (function updateHealth(){
-  $('.health').animate({'width': 3*hero.health+'px'},'easeInCubic');
-  setTimeout(updateHealth,1000);
+  $('.health').animate({'width': 3*hero.health+'px'},'ease');
+  $('.health2').animate({'width': 3*villain.health+'px'},'ease');
+
+  setTimeout(updateHealth,500);
 })();
+
+// add health implementation 
+$('.add-health').on('click tap', function(){
+    hero.health = hero.health + 30;
+    $('.octicon-heart').css({"visibility": "hidden"});
+    $('.add-health').attr('disabled', 'disabled');
+});
 
 
 $('.fight-button').on('click tap', function(){
+
+    $(this).attr('disabled','disabled');
     var selected = $('.dropdown :selected').attr('id');
     console.log(selected);
     if (selected == "fighter") {
       hero = new Fighter();
+      $('.fighter-image img').attr("src",fighterImages[0]);
     }
     else if (selected == "wizard") {
       hero = new Wizard();
+      $('.fighter-image img').attr("src",fighterImages[1]);
     }
     else if (selected == "archer") {
       hero = new Archer();
+      $('.fighter-image img').attr("src",fighterImages[2]);
     }
     $('.dropdown').empty();
+
     // generate enemy 
     villain = enemies[Math.floor(Math.random()*3)];
+    if (villain.name=="Tiny") {
+      $('.enemy-image img').attr("src",enemyImages[1]);
+    }
+    else if (villain.name=="Jake") {
+      $('.enemy-image img').attr("src",enemyImages[2]);
+    }
+    else if (villain.name=="Big Sexy") {
+      $('.enemy-image img').attr("src",enemyImages[0]);
+    }
+
 });
 
 
@@ -58,6 +72,7 @@ function atk(){
     villain.attack(hero);
     $('.attack1').attr('disabled', false);
     $('.attack2').attr('disabled',false);
+
 }
 
 // attack button functionality
@@ -65,7 +80,8 @@ $('.attack1').on('click tap', function(){
     hero.attack1(villain);
     $('.attack1').attr('disabled','disabled');
     $('.attack2').attr('disabled','disabled');
-    setTimeout(atk, 2000);
+
+    setTimeout(atk, 1000);
 });
 
 // attack button2 functionality
@@ -73,7 +89,7 @@ $('.attack2').on('click tap', function(){
     hero.attack2(villain);
     $('.attack1').attr('disabled','disabled');
     $('.attack2').attr('disabled','disabled');
-    setTimeout(atk, 2000);
+    setTimeout(atk, 1000);
 });
 
 
