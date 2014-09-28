@@ -150,6 +150,109 @@ h2 {
   margin: 35px 0 0 0;
 }
 
+//GAME OVER
+
+.blood {
+  margin: 0 0 0 216px;
+  z-index: 2;
+  position: absolute;
+  width: 70%;
+  height: 500px;
+  overflow: hidden;
+}
+
+/* .blood:hover .blood-top {
+  top: 0;
+  opacity: .95;
+  transition-duration: 4s;
+} */
+
+.blood-top {
+  position: absolute;
+  top: -1000px;
+  margin: 0;
+  width: 100%;
+  height: 720px;
+  background: #9E0000;
+  opacity: .8;
+}
+
+.blood-top img{
+  width: 100%;
+  opacity: .9;
+  z-index: 2;
+}
+
+
+.game-over {
+  font-size: 80px;
+  margin: 0;
+  text-align: center;
+  padding-top: 200px;
+  margin-bottom: 400px;
+}
+
+// VICTORY
+
+.victory {
+  margin: 0 0 0 216px;
+  width: 70%;
+  height: 500px;
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+  overflow: hidden;
+}
+
+.victory-cont {
+  background: url("http://i271.photobucket.com/albums/jj140/99alongway/Confetti.gif");
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  top: -500px;
+}
+
+.victory:hover .victory-cont {
+  top: 0;
+  transition-duration: 2s;
+}
+
+.victory:hover .win {
+  animation-delay: 4s;
+  animation: winner 1s linear;
+}
+
+@keyframes winner {
+  0% {
+    opacity: 0;
+    font-size: 10px;
+  }
+
+  90% {
+    opacity: 1;
+    font-size: 90px;
+  }
+
+  100% {
+    opacity: 1;
+    font-size: 80px;
+  }
+}
+
+.victory img {
+  width: 100%;
+  height: 300px;
+}
+
+.win {
+  margin-top: 210px;
+  color: blue;
+  font-size: 80px;
+}
+
+
+// FIGHT AREA
+
 .fight-area {
   overflow: hidden;
   position: absolute;
@@ -162,6 +265,7 @@ h2 {
   /*('http://slateman.net/images/gaming/backgrounds/sf2ww-blanka.gif')*/
   background-size: /*150*/120%;
   background-repeat: no-repeat;
+  z-index: 1;
 
 }
 
