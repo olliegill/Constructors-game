@@ -64,6 +64,10 @@ h2 {
   font-size: 70px;
 }
 
+.add-health:active span {
+  visibility: hidden;
+}
+
 .add-health h4 {
   margin: 0;
   background: #C0C0C0;
@@ -162,6 +166,9 @@ h2 {
 }
 .fighter-image img {
   height: 200px;
+
+// HEY CHAD!!!  
+
 /*   -moz-transform: scaleX(-1);
 -o-transform: scaleX(-1);
 -webkit-transform: scaleX(-1);
