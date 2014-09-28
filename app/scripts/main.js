@@ -36,7 +36,7 @@ var enemyImages = ["http://www.videogamesprites.net/SuperMarioBros1/Enemies/Cast
   setTimeout(updateHealth,500);
 })();
 
-// add health implementation 
+// add health implementation
 $('.add-health').on('click tap', function(){
     hero.health = hero.health + 30;
     $('.octicon-heart').css({"visibility": "hidden"});
@@ -56,6 +56,7 @@ $('.fight-button').on('click tap', function(){
     else if (selected == "wizard") {
       hero = new Wizard();
       $('.fighter-image img').attr("src",fighterImages[1]);
+      $('.fighter-image img').addClass('link-flip');
     }
     else if (selected == "archer") {
       hero = new Archer();
@@ -63,7 +64,7 @@ $('.fight-button').on('click tap', function(){
     }
     $('.dropdown').empty();
 
-    // generate enemy 
+    // generate enemy
     villain = enemies[Math.floor(Math.random()*3)];
     if (villain.name=="Tiny") {
       $('.enemy-image img').attr("src",enemyImages[1]);
@@ -78,7 +79,7 @@ $('.fight-button').on('click tap', function(){
 });
 
 
-// function for villain attack also enables button. 
+// function for villain attack also enables button.
 function atk(){
     villain.attack(hero);
     $('.attack1').attr('disabled', false);
@@ -106,6 +107,3 @@ $('.attack2').on('click tap', function(){
 
 
 }());
-
-
-
