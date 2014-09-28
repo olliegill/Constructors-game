@@ -189,8 +189,6 @@ h2 {
   display: inline-block;
   float: right;
    @include transform(rotate(180deg));
-
-
 }
 
 .health2 {
@@ -199,8 +197,6 @@ h2 {
     border-radius: 3px;
     background: RGBA(0, 245, 5, 1);
 }
-
-
 
 
 .fighter-image img {
