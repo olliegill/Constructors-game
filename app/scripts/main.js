@@ -58,6 +58,7 @@ function atk(){
     villain.attack(hero);
     $('.attack1').attr('disabled', false);
     $('.attack2').attr('disabled',false);
+
 }
 
 // attack button functionality
@@ -65,6 +66,7 @@ $('.attack1').on('click tap', function(){
     hero.attack1(villain);
     $('.attack1').attr('disabled','disabled');
     $('.attack2').attr('disabled','disabled');
+
     setTimeout(atk, 2000);
 });
 
