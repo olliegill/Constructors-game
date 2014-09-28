@@ -164,6 +164,45 @@ h2 {
   background-repeat: no-repeat;
 
 }
+
+// health bar styling 
+.health_bar_container {
+  height: 50px;
+  width:300px;
+  border-radius: 3px;
+  background:RGBA(175, 17, 28,1);
+  display: inline-block;
+}
+
+.health {
+    height: 50px;
+    width: 300px;
+    border-radius: 3px;
+    background: RGBA(0, 245, 5, 1)
+}
+
+.health_bar_container2 {
+  height: 50px;
+  width:300px;
+  border-radius: 3px;
+  background:RGBA(175, 17, 28,1);
+  display: inline-block;
+  float: right;
+   @include transform(rotate(180deg));
+
+
+}
+
+.health2 {
+    height: 50px;
+    width: 300px;
+    border-radius: 3px;
+    background: RGBA(0, 245, 5, 1);
+}
+
+
+
+
 .fighter-image img {
   height: 200px;
 

@@ -3,23 +3,6 @@
   'use strict';
 
 
-// health bar styling 
-$('.health_bar_container').css({
-	"height":"50px",
-	"width":"300px",
-	"border-radius": "3px",
-	"background":"RGBA(175, 17, 28,1)"
-
-
-});
-
-$('.health').css({
-    "height":"50px",
-    "width": "300px",
-     "border-radius":"3px",
-     "background": "RGBA(0, 245, 5, 1)",
-});
-
 
 // variable declaration for characters
 var enemies = [ new Enemy1(), new Enemy2(), new Enemy3()];
@@ -29,9 +12,18 @@ var villain = {};
 
 //health bar
 (function updateHealth(){
-  $('.health').animate({'width': 3*hero.health+'px'},'easeInCubic');
+  $('.health').animate({'width': 3*hero.health+'px'},'ease');
+  $('.health2').animate({'width': 3*villain.health+'px'},'ease');
+
   setTimeout(updateHealth,1000);
 })();
+
+// add health implementation 
+$('.add-health').on('click tap', function(){
+    hero.health = hero.health + 30;
+    $('.octicon-heart').css({"visibility": "hidden"});
+    $('.add-health').attr('disabled', 'disabled');
+});
 
 
 $('.fight-button').on('click tap', function(){
