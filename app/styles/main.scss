@@ -154,18 +154,19 @@ h2 {
 
 .blood {
   margin: 0 0 0 216px;
-  z-index: 2;
+  z-index: 4;
   position: absolute;
   width: 70%;
   height: 500px;
   overflow: hidden;
 }
 
-/* .blood:hover .blood-top {
-  top: 0;
-  opacity: .95;
-  transition-duration: 4s;
-} */
+  .blood:hover .blood-top {
+ top: 0;
+ opacity: .9;
+ transition-duration: 4s;
+ z-index: 4;
+}
 
 .blood-top {
   position: absolute;
@@ -175,12 +176,13 @@ h2 {
   height: 720px;
   background: #9E0000;
   opacity: .8;
+  z-index: 4;
 }
 
 .blood-top img{
   width: 100%;
   opacity: .9;
-  z-index: 2;
+  z-index: 4;
 }
 
 
@@ -194,12 +196,12 @@ h2 {
 
 // VICTORY
 
-.victory {
+ .victory {
   margin: 0 0 0 216px;
   width: 70%;
   height: 500px;
   position: absolute;
-  z-index: 2;
+  z-index: 5;
   text-align: center;
   overflow: hidden;
 }
@@ -210,16 +212,19 @@ h2 {
   width: 100%;
   height: 500px;
   top: -500px;
+  z-index: 3;
 }
 
-.victory:hover .victory-cont {
+ .victory:hover .victory-cont {
   top: 0;
   transition-duration: 2s;
+  z-index: 3;
 }
 
 .victory:hover .win {
   animation-delay: 4s;
   animation: winner 1s linear;
+  z-index: 3;
 }
 
 @keyframes winner {
@@ -257,7 +262,8 @@ h2 {
   overflow: hidden;
   position: absolute;
   left: 15%;
-  margin: auto auto;
+  top: 0;
+  margin: 140px auto 0;
   height: 500px;
   width: 70%;
    background: url('http://twistedsifter.files.wordpress.com/2013/05/animated-gifs-of-fighting-game-backgrounds-24.gif');
