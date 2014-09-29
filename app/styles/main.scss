@@ -430,11 +430,9 @@ h2 {
 
 }
 
-
-
-
 .text-area {
   position: absolute;
+  padding:8px;
   top: 680px;
   left: 15%;
   border: inset #1D1F21 12px;
@@ -442,13 +440,25 @@ h2 {
   width: 70%;
   background: radial-gradient(ellipse, #363636, #1D1F21);
   text-align: center;
+  @include clearfix;
 
-}
+  .text1 {
+    font-family: $text-font;
+    color: green;
+    font-size: 20px;
+    float:left;
+    text-align:left;
+    width:70%;
+    height:50%;
+  }
 
-.text {
-  display: inline-block;
-  font-family: $text-font;
-  color: white;
-  font-size: 30px;
-  margin-top: 25px;
+  .text2 {
+    font-family: $text-font;
+    color: red;
+    font-size: 20px;
+    float:right;
+    text-align:right;
+    width:70%;
+    height:50%;
+  }
 }

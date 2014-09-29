@@ -21,10 +21,12 @@ var enemyImages = ["http://www.videogamesprites.net/SuperMarioBros1/Enemies/Cast
   $('.health').animate({'width': 3*hero.health+'px'},'ease');
   $('.health2').animate({'width': 3*villain.health+'px'},'ease');
   if (villain.health <= 0 ) {
+    $('button').attr('disabled','disabled');
     $('.victory-cont').addClass('victory-cont2');
     $('.win').addClass('win2');
   }
   if (hero.health <= 0 ) {
+    $('button').attr('disabled','disabled');
     // $('.blood-top').addClass('blood-top2');
     // $('.blood :first-child').addClass('blood-top2').removeClass('blood-top');
     $('.blood-top').animate({
@@ -89,6 +91,8 @@ function atk(){
 
 // attack button functionality
 $('.attack1').on('click tap', function(){
+    $('.text1').html("");
+    $('.text2').html("");
     hero.attack1(villain);
     $('.attack1').attr('disabled','disabled');
     $('.attack2').attr('disabled','disabled');
