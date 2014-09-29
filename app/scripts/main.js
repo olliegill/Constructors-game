@@ -82,6 +82,12 @@ $('.fight-button').on('click tap', function(){
 // function for villain attack also enables button.
 function atk(){
     villain.attack(hero);
+    if (hero.damage > 0) {
+        $('.text-area :first-child').text(hero.name +' took ' + hero.damage +' damage. ' + hero.name +' now has ' + hero.health + ' hit points.');
+    }
+    else {
+        $('.text-area :first-child').text(hero.name + " Dodged!");
+    }
     $('.attack1').attr('disabled', false);
     $('.attack2').attr('disabled',false);
 
@@ -89,20 +95,60 @@ function atk(){
 
 // attack button functionality
 $('.attack1').on('click tap', function(){
+
     hero.attack1(villain);
+    if (villain.damage > 0) {
+      $('.text-area :first-child').text('You hit a(n) ' + villain.damage +'. ' + villain.name +' now has ' + villain.health + ' hit points.');
+    }
+    else {
+      $('.text-area :first-child').text(hero.name + " Missed!");
+    }
+
     $('.attack1').attr('disabled','disabled');
     $('.attack2').attr('disabled','disabled');
 
 
-    setTimeout(atk, 1000);
+
+    //setTimeout(atk, 1000);
+
+    setTimeout(atk, 2000);
 });
 
 // attack button2 functionality
 $('.attack2').on('click tap', function(){
     hero.attack2(villain);
+    if (hero.name == "Merlin") {
+       if (hero.numOfMagicAttacks > 0 ) {
+        console.log(hero.numOfMagicAttacks);
+          if (villain.damage > 0) {
+            $('.text-area :first-child').text('You hit a(n) ' + villain.damage +'. ' + villain.name +' now has ' + villain.health + ' hit points. Only ' + hero.numOfMagicAttacks+ " magic attack(s) remain(s)!");
+          }
+          else {
+            $('.text-area :first-child').text(hero.name + " Missed!" + " Only " + hero.numOfMagicAttacks + " magic attack(s) remain(s)!");
+          }
+       }
+       else {
+          $('.text-area :first-child').text("You outta magic yo!");
+       }
+    }
+    else {
+
+        if (villain.damage > 0) {
+          $('.text-area :first-child').text('You hit a(n) ' + villain.damage +'. ' + villain.name +' now has ' + villain.health + ' hit points.');
+        }
+        else {
+          $('.text-area :first-child').text(hero.name + " Missed!");
+        }
+    }
+    // if (villain.damage > 0) {
+    //   $('.text-area :first-child').text('You hit a(n) ' + villain.damage +'. ' + villain.name +' now has ' + villain.health + ' hit points.');
+    // }
+    // else {
+    //   $('.text-area :first-child').text(hero.name + " Missed!");
+    // }
     $('.attack1').attr('disabled','disabled');
     $('.attack2').attr('disabled','disabled');
-    setTimeout(atk, 1000);
+    setTimeout(atk, 2000);
 });
 
 
