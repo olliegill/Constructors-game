@@ -56,7 +56,7 @@ $('.fight-button').on('click tap', function(){
     else if (selected == "wizard") {
       hero = new Wizard();
       $('.fighter-image img').attr("src",fighterImages[1]);
-      $('.fighter-image img').addClass('link-flip');
+      $('.fighter-image img').addClass('link-flip ');
     }
     else if (selected == "archer") {
       hero = new Archer();
@@ -92,6 +92,7 @@ $('.attack1').on('click tap', function(){
     hero.attack1(villain);
     $('.attack1').attr('disabled','disabled');
     $('.attack2').attr('disabled','disabled');
+
 
     setTimeout(atk, 1000);
 });

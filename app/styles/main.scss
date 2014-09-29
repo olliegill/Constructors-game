@@ -403,9 +403,10 @@ h2 {
 .fighter-image .fireball {
   position: absolute;
   bottom: 100px;
-  left: 80px;
+  left: 50px;
   height: 30px;
-  animation: fire 2s linear infinite;
+  visibility: hidden;
+  animation: fire 2s linear;
 }
 
 @keyframes fire {
@@ -414,7 +415,7 @@ h2 {
   }
 
   100% {
-    transform: translate(300px, 0);
+    transform: translate(330px, 0);
   }
 }
 
