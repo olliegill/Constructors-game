@@ -8,12 +8,12 @@
 var enemies = [ new Enemy1(), new Enemy2(), new Enemy3()];
 var hero = {};
 var villain = {};
-var fighterImages = ["http://www.videogamesprites.net/SuperMarioBros1/Characters/Mario/xFiery,P20Mario.gif.pagespeed.ic.ot4UfLXTC9.png",
-"http://www.videogamesprites.net/Zelda2/Link/Link%20(Normal)%20-%20Stab.gif",
+var fighterImages = ["//www.videogamesprites.net/SuperMarioBros1/Characters/Mario/xFiery,P20Mario.gif.pagespeed.ic.ot4UfLXTC9.png",
+"//www.videogamesprites.net/Zelda2/Link/Link%20(Normal)%20-%20Stab.gif",
 "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAABAAgMAAAAG4J09AAAADFBMVEUAuAAAiP//////pEAwwxouAAAAAnRSTlP/AOW3MEoAAACOSURBVCjPhdAhEoNAEATAMRjMfu3MGEy+hsGMua9hzmAm4orKblJFXOsGSekgkSBpFGxS/4GkjAaHmRGnYVeE7fFBizMcFTYAJsA+C9jC9shgtxcWrMBe0FZgXzKwAjsS2sSSIUAZmECB9IUuXRm2JNlPeE2MhEuSegJ1h9/YpGOTjgLyDwiQAJ+ACTzgDc4a3fVN7/srAAAAAElFTkSuQmCC"];
-var enemyImages = ["http://www.videogamesprites.net/SuperMarioBros1/Enemies/Castle/Bowser.gif",
-"http://www.videogamesprites.net/SuperMarioBros1/Enemies/Overworld/Goomba.gif",
-"http://www.videogamesprites.net/SuperMarioBros1/Enemies/Underground/Buzzy%20Beetle%20-%20Blue.gif"];
+var enemyImages = ["//www.videogamesprites.net/SuperMarioBros1/Enemies/Castle/Bowser.gif",
+"//www.videogamesprites.net/SuperMarioBros1/Enemies/Overworld/Goomba.gif",
+"//www.videogamesprites.net/SuperMarioBros1/Enemies/Underground/Buzzy%20Beetle%20-%20Blue.gif"];
 
 
 //health bar and end game screens

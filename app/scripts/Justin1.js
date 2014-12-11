@@ -30,7 +30,7 @@ Archer.prototype.attack2 = function(foe) {
     console.log("You hit a(n) " + hitAmount + ". " + foe.name + " now has " + foe.health + " hitpoints.");
   } else {
     console.log("You missed!");
-    foe.damage = 0;;
+    foe.damage = 0;
   }
 };
 
@@ -45,7 +45,7 @@ Enemy2.prototype.attack = function(foe) {
       console.log("You were hit " + hitAmount + ". You now have "+ foe.health + "hitpoints.");
     } else {
       console.log("They missed!");
-      foe.damage = 0;;
+      foe.damage = 0;
     }
   } else {
     if(Math.random() < 0.4) {
